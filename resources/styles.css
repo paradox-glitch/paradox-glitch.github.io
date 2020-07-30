@@ -1,0 +1,101 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+@font-face {
+    font-family: 'Pianaforma';
+    src: url('Pianaforma.ttf');
+}
+
+:root{
+    --primary-color: #808080;
+    --overlay-color: #480986;
+    --menu-speed: 0.75s;
+}
+
+* {
+    font-family: 'Pianaforma', 'Didact Gothic', sans-serif;
+    line-height: 1.4;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for our header texts
+	* --------------------------------------- */
+h1 {
+    font-size: 20px;
+    font-family: 'Pianaforma', 'Didact Gothic', sans-serif;
+    font-weight: normal;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.intro p {
+    font-size: 16px;
+    font-family: 'Pianaforma', 'Didact Gothic', sans-serif;
+    font-weight: normal;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Centered texts in each section
+	* --------------------------------------- */
+.section {
+    text-align: center;
+}
+
+
+
+/* Defining each section background and styles
+	* --------------------------------------- */
+#section0 {
+    background: -webkit-gradient(linear, top left, bottom left, from(#640995), to(#620994));
+    background: -webkit-linear-gradient(#640995, #620994);
+    background: linear-gradient(#640995,#620994);
+}
+
+#section2 {
+    background: -webkit-gradient(linear, top left, bottom left, from(#55098d), to(#480986));
+    background: -webkit-linear-gradient(#55098d, #480986);
+    background: linear-gradient(#55098d,#480986);
+}
+
+
+
+/*Adding background for the slides
+	* --------------------------------------- */
+#slide1 {
+    background: -webkit-gradient(linear, top left, bottom left, from(#620994), to(#55098d));
+    background: -webkit-linear-gradient(#620994, #55098d);
+    background: linear-gradient(#620994,#55098d);
+}
+
+#slide2 {
+    background: -webkit-gradient(linear, top left, bottom left, from(#620994), to(#55098d));
+    background: -webkit-linear-gradient(#620994, #55098d);
+    background: linear-gradient(#620994,#55098d);
+}
+
+
+/* Bottom menu
+	* --------------------------------------- */
+#infoMenu {
+    bottom: 80px;
+}
+
+#infoMenu li a {
+    color: #fff;
+}
+
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    top: 20%;
+    opacity: 1;
+    transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    -webkit-transform: translate3d(0,-20%,0);
+}

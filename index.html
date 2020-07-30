@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--
+        Page Meta, Defines the Title of the Page and Important Information about the Page
+    -->
+    <title>Paradox-Glitch</title>
+    <meta charset="utf-8" />
+    <meta content="text" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="default-style" content="resources/styles.css">
+    <meta name="author" content="Morgan Joshua Finney" />
+    <meta name="description" content="Game Design by Morgan Finney" />
+    <meta name="keywords" content="home,about,projects,games,dev,coding,design" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Resource-type" content="Document" />
+
+    <!--
+        Base URL for all Following short URLs
+        [Comment out for Offline Testing]
+    -->
+    <!--<base href="https://paradox-glitch.co.uk/" target="_blank">-->
+    <!--
+        Icons Declaration for Browser Icons, Apple Icons, and Windows Tile Icons
+    -->
+    <link rel="shortcut icon" href="resources/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="resources/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="resources/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="resources/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="resources/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="resources/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16.png">
+    <link rel="apple-touch-icon" href="resources/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="resources/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="resources/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="resources/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="resources/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="resources/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="resources/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="resources/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#640995">
+    <meta name="msapplication-TileImage" content="resources/favicon-144.png">
+    <meta name="msapplication-config" content="resources/browserconfig.xml">
+
+    <!--
+        External Style Sheets
+    -->
+    <link rel="stylesheet" type="text/css" href="resources/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="resources/menu.css" />
+    <link rel="stylesheet" type="text/css" href="resources/styles.css" />
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+</head>
+<body>
+
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler" id="myfield"/>
+        <div class="hamburger">
+            <div>
+
+            </div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a class="noreee" id="test" href="#home">Home</a></li>
+                        <li><a class="noreee" id="test2" href="#about">About</a></li>
+                        <li><a class="noreee" id="test3" href="#projects">Projects</a></li>
+                        <li><a class="noreee" id="test4" href="#">Portfolio</a></li>
+                        <li><a class="noreee" id="test5" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="footer">Footer</div>-->
+
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <div class="intro">
+                <img src="assets/branding/logo.png" alt="fullPage" style="width:300px" />
+                <h1>MORGAN FINNEY</h1>
+                <p>GAMES DESIGN</p>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="slide" id="slide1"><h1>Projects</h1></div>
+            <div class="slide" id="slide2"><h1>Projects</h1></div>
+        </div>
+        <div class="section" id="section2">
+            <div class="intro">
+                <h1>About Me</h1>
+                <p>Hi i am morgan</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="resources/fullpage.js"></script>
+
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            navigationPosition: 'left',
+            anchors: ['home', 'projects', 'about'],
+            navigation: true,
+            navigationTooltips: ['Page 1', 'Page 2', 'Any text!'],
+            showActiveTooltip: true,
+            menu: '#menu',
+        });
+    </script>
+
+    <script>
+        var myhref = document.getElementsByClassName('noreee');
+
+        for (var i = 0; i < myhref.length; i++) {
+            if (myhref[i].id && myhref[i].id != "") {
+                document.getElementById(myhref[i].id).addEventListener("click", onLinkClick);
+            }
+        }
+
+        var myfield = document.getElementById("myfield");
+
+        function onLinkClick(event) {
+            myfield.checked = false;
+        }
+    </script>
+
+</body>
+</html>

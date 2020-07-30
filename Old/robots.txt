@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://paradox-glitch.co.uk/sitemap.xml
