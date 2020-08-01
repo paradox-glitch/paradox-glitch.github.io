@@ -61,7 +61,7 @@
 <body>
 
     <div class="menu-wrap">
-        <input type="checkbox" class="toggler" id="myfield"/>
+        <input type="checkbox" class="toggler" id="menuCheckbox" />
         <div class="hamburger">
             <div>
 
@@ -71,13 +71,22 @@
             <div>
                 <div>
                     <ul>
-                        <li><a class="noreee" id="test" href="#home">Home</a></li>
-                        <li><a class="noreee" id="test2" href="#about">About</a></li>
-                        <li><a class="noreee" id="test3" href="#projects">Projects</a></li>
-                        <li><a class="noreee" id="test4" href="#">Portfolio</a></li>
-                        <li><a class="noreee" id="test5" href="#">Contact</a></li>
+                        <li><a class="menuItem" id="menuItemID1" href="#home">Home</a></li>
+                        <li><a class="menuItem" id="menuItemID2" href="#about">About</a></li>
+                        <li><a class="menuItem" id="menuItemID3" href="#projects">Projects</a></li>
+                        <li><a class="menuItem" id="menuItemID4" href="#">Portfolio</a></li>
+                        <li><a class="menuItem" id="menuItemID5" href="#">Contact</a></li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <form class="menuhome" action="#home">
+            <input type="submit" class="menuhome" />
+        </form>
+
+        <div class="menuicon">
+            <div>
+                <img href="#" src="assets/branding/logo.png" width="150%" />
             </div>
         </div>
     </div>
@@ -118,7 +127,7 @@
     </script>
 
     <script>
-        var myhref = document.getElementsByClassName('noreee');
+        var myhref = document.getElementsByClassName('menuItem');
 
         for (var i = 0; i < myhref.length; i++) {
             if (myhref[i].id && myhref[i].id != "") {
@@ -126,10 +135,10 @@
             }
         }
 
-        var myfield = document.getElementById("myfield");
+        var menuCheckbox = document.getElementById("menuCheckbox");
 
         function onLinkClick(event) {
-            myfield.checked = false;
+            menuCheckbox.checked = false;
         }
     </script>
 
