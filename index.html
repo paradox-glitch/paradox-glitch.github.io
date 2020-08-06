@@ -52,6 +52,66 @@
     <link rel="stylesheet" type="text/css" href="resources/menu.css" />
     <link rel="stylesheet" type="text/css" href="resources/styles.css" />
 
+    <style>
+
+        /* Centered texts in each section
+        * --------------------------------------- */
+        .section {
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #myVideo {
+            position: relative;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-color: black; /* in case the video doesn't fit the whole page*/
+            background-image: url("assets/games/uniguns/unigunsShort.mp4");
+            background-position: center center;
+            background-size: contain;
+            object-fit: cover; /*cover video background */
+            z-index: 3;
+        }
+
+
+
+        /* Layer with position absolute in order to have it over the video
+        * --------------------------------------- */
+        #slide1 .layer {
+            position: absolute;
+            z-index: 4;
+            width: 100vw;
+            left: 0;
+            top: 43%;
+            * Preventing flicker on some browsers * See http://stackoverflow.com/a/36671466/1081396 or issue #183 -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+        /*solves problem with overflowing video in Mac with Chrome */
+        #slide1 {
+            overflow: hidden;
+        }
+
+        /* Bottom menu
+        * --------------------------------------- */
+        #infoMenu li a {
+            color: #fff;
+        }
+
+
+        /* Hiding video controls
+        * See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+        * --------------------------------------- */
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+    </style>
+
     <!--[if IE]>
         <script type="text/javascript">
              var console = { log: function() {} };
@@ -102,14 +162,25 @@
             </div>
         </div>
         <div class="section" id="section1">
-            <div class="slide" id="slide1"><h1>Projects</h1></div>
+
+            <div class="slide" id="slide1">
+                <video id="myVideo" loop muted data-autoplay>
+                    <source src="assets/games/uniguns/unigunsShort.mp4" type="video/mp4">
+                    <source src="assets/games/uniguns/unigunsShort.mp4" type="video/webm">
+                </video>
+                <div class="layer">
+                    <img src="assets/games/uniguns/unigunsLogo.png" style=" height: 30vh; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges;" />
+                    <h1>Uniguns</h1>
+                    <p>Uniguns is a game created in Unity for my first year uniproject. It's a simple multiplayer platformer shooter, where the players are unicorns.</p>
+                    <form action="https://github.com/paradox-glitch/Uniguns" method="get" target="_blank">
+                        <button type="submit">Uniguns on GitHub</button>
+                    </form>
+                </div>
+            </div>
             <div class="slide" id="slide2"><h1>Projects</h1></div>
         </div>
         <div class="section" id="section2">
-            <div class="intro">
-                <h1>About Me</h1>
-                <p>Hi i am morgan</p>
-            </div>
+
         </div>
     </div>
 
