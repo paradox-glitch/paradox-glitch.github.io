@@ -4,6 +4,7 @@
 @font-face {
     font-family: 'Pianaforma';
     src: url('Pianaforma.ttf');
+    font-display: swap;
 }
 
 :root{
